@@ -1785,3 +1785,36 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(0, 212, 255, 0.25);
 }
+
+/* ===== MOBILE ABOUT FIX ===== */
+
+@media (max-width: 768px) {
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .about-text {
+        transform: none !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .about-description {
+        width: 100%;
+    }
+
+    .about-highlights {
+        width: 100%;
+    }
+
+    .about-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
