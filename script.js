@@ -13,45 +13,51 @@ document.addEventListener('DOMContentLoaded', function () {
     const socialIcons = document.querySelectorAll('.social-icon');
 
     // Professions for typewriter effect
-    const professions = [
-        'Java Developer',
-        'Backend Engineer',
-        'Problem Solver',
-        'Tech Innovator'
-    ];
+   const professions = [
+    'Java Developer',
+    'Backend Engineer',
+    'Problem Solver',
+    'Tech Innovator'
+];
 
-    // Typewriter Effect
-    let professionIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let typingSpeed = 150;
+// Typewriter Effect
+let professionIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 150;
 
-    function typeWriter() {
-        if (!heroSubtitle) return;
+function typeWriter() {
+    if (!heroSubtitle) return;
 
-        const currentProfession = professions[professionIndex];
+    const currentProfession = professions[professionIndex];
 
-        if (isDeleting) {
-            heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex - 1) + '<span class="cursor">|</span>';
-            charIndex--;
-            typingSpeed = 75;
-        } else {
-            heroSubtitle.innerHTML = "I'm a " + currentProfession.substring(0, charIndex + 1) + '<span class="cursor">|</span>';
-            charIndex++;
-            typingSpeed = 150;
-        }
+    if (isDeleting) {
+        heroSubtitle.innerHTML =
+            currentProfession.substring(0, charIndex - 1) +
+            '<span class="cursor">|</span>';
 
-        if (!isDeleting && charIndex === currentProfession.length) {
-            typingSpeed = 2000; // Pause at end
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            professionIndex = (professionIndex + 1) % professions.length;
-            typingSpeed = 500; // Pause before next word
-        }
+        charIndex--;
+        typingSpeed = 75;
+    } else {
+        heroSubtitle.innerHTML =
+            currentProfession.substring(0, charIndex + 1) +
+            '<span class="cursor">|</span>';
 
-        setTimeout(typeWriter, typingSpeed);
+        charIndex++;
+        typingSpeed = 150;
     }
+
+    if (!isDeleting && charIndex === currentProfession.length) {
+        typingSpeed = 2000; // Pause at end
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        professionIndex = (professionIndex + 1) % professions.length;
+        typingSpeed = 500; // Pause before next word
+    }
+
+    setTimeout(typeWriter, typingSpeed);
+}
 
     // Mobile Menu Toggle
     function toggleMobileMenu() {

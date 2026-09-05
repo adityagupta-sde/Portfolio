@@ -466,7 +466,7 @@ header.scrolled {
     color: white;
 }
 
-.social-icon.instagram:hover {
+.social-icon.email:hover {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: white;
 }
@@ -1817,4 +1817,11 @@ body {
         justify-content: center;
         flex-wrap: wrap;
     }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #888;
 }
