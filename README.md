@@ -8,7 +8,7 @@ The portfolio is designed with a clean dark theme, smooth animations, responsive
 
 ## 🔗 Live Portfolio
 
-🚀 **[View Live Portfolio](https://portfolio-gamma-smoky-43.vercel.app/)**
+🚀 **[View Live Portfolio](https://aditya-gupta-sde.vercel.app/)**
 
 ---
 
