@@ -1825,3 +1825,26 @@ body {
     font-size: 14px;
     color: #888;
 }
+
+/* Hide certificates after the first 3 */
+.certificate-card:nth-child(n+4) {
+    display: none;
+}
+
+/* View More button */
+.certificates-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.certificates-toggle .certificate-btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* When expanded */
+.services-grid.show-all .certificate-card:nth-child(n+4) {
+    display: block;
+}

@@ -510,3 +510,28 @@ if ('serviceWorker' in navigator) {
         //     .catch(error => console.log('SW registration failed'));
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const viewMoreBtn = document.getElementById("viewMoreCertificates");
+    const certificatesGrid = document.querySelector(".services-grid");
+
+    if (!viewMoreBtn || !certificatesGrid) {
+        return;
+    }
+
+    viewMoreBtn.addEventListener("click", function () {
+
+        certificatesGrid.classList.toggle("show-all");
+
+        if (certificatesGrid.classList.contains("show-all")) {
+            viewMoreBtn.innerHTML =
+                '<i class="fas fa-chevron-up"></i> View Less';
+        } else {
+            viewMoreBtn.innerHTML =
+                '<i class="fas fa-chevron-down"></i> View More';
+        }
+
+    });
+
+});
